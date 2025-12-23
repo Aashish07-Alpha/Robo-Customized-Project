@@ -2,6 +2,12 @@
 
 A professional full-stack application that generates compelling marketing content and high-quality product images for fashion and e-commerce brands. Built with modern technologies and powered by advanced AI models.
 
+## 🌐 Live Demo
+
+**🚀 [View Live Application](https://robo-customized-project-i4ix.vercel.app/)**
+
+Experience the tool in action! Generate professional product images and marketing content in seconds.
+
 ## ✨ Features
 
 - **🖼️ Product Image Generation**: Creates ultra-realistic studio-quality product photographs using Stability AI SDXL
