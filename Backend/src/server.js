@@ -15,7 +15,8 @@ const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:5174',
   process.env.FRONTEND_URL,
-  'https://robo-customized-project.vercel.app'
+  'https://robo-customized-project.vercel.app',
+  'https://robo-customized-project-i4ix.vercel.app'
 ].filter(Boolean);
 
 app.use(cors({
@@ -23,12 +24,16 @@ app.use(cors({
     // Allow requests with no origin (like mobile apps or curl)
     if (!origin) return callback(null, true);
     
-    if (allowedOrigins.includes(origin)) {
+    // Check if origin matches allowed origins or is a Vercel preview deployment
+    if (allowedOrigins.includes(origin) || (origin && origin.includes('.vercel.app'))) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
     }
   },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
   credentials: true
 }));
 
