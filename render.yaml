@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: product-marketing-backend
+    env: node
+    region: oregon
+    plan: free
+    branch: main
+    rootDir: Backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false
+      - key: STABILITY_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
