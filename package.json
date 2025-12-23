@@ -2,12 +2,13 @@
   "name": "product-marketing-tool",
   "version": "1.0.0",
   "description": "Product Marketing & Visualization Tool",
-  "main": "Backend/src/server.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "cd Backend && npm install && npm start",
+    "start": "node server.js",
     "build": "cd Backend && npm install",
-    "dev": "cd Backend && npm run dev"
+    "dev": "cd Backend && npm run dev",
+    "backend": "cd Backend && npm start"
   },
   "keywords": ["marketing", "fashion", "e-commerce", "product-visualization"],
   "author": "Aashish Suryawanshi",
